@@ -16,18 +16,18 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         $request->validate([
-            'email' => 'required|email',
+            'username' => 'required',
             'password' => 'required',
         ]);
 
-        if (Auth::attempt($request->only('email', 'password'), $request->boolean('remember'))) {
+        if (Auth::attempt($request->only('username', 'password'), $request->boolean('remember'))) {
             $request->session()->regenerate();
 
             return redirect()->intended('/');
         }
 
         throw ValidationException::withMessages([
-            'email' => 'Email atau password salah.',
+            'username' => 'Email atau password salah.',
         ]);
     }
 

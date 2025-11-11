@@ -21,27 +21,27 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6" data-aos="fade-up">
-          <h2 class="mb-4">Tentang Kami</h2>
+          <h2 class="mb-4">Tentang Toko</h2>
           <p>
-            SMK YPC Tasikmalaya adalah lembaga pendidikan vokasi yang fokus pada pengembangan
-            keterampilan praktis dan pengetahuan teoritis untuk mempersiapkan siswa menghadapi
-            dunia kerja yang kompetitif.
+            Toko SMK YPC Tasikmalaya adalah wadah kreativitas dan wirausaha bagi siswa untuk mengembangkan kemampuan bisnis sejak dini.
+            Melalui toko ini, siswa mempraktikkan langsung ilmu kewirausahaan dengan menjual produk hasil karya sendiri, mulai dari kerajinan, teknologi, hingga kuliner.
+            Setiap produk mencerminkan semangat inovasi, kualitas, dan kemandirian generasi muda SMK YPC Tasikmalaya.
           </p>
           <p>
-            Kami menawarkan berbagai program keahlian yang relevan dengan kebutuhan industri saat ini,
-            didukung oleh tenaga pengajar yang profesional dan fasilitas modern.
+            Dukung karya anak SMK!
+            Temukan produk kreatif, inovatif, dan berkualitas dari siswa SMK YPC Tasikmalaya.
+            Belanja sambil berkontribusi untuk masa depan generasi produktif Indonesia
           </p>
           <ul class="list-unstyled">
             <li><i class="bi bi-check-circle-fill text-success me-2"></i>Pendidikan Berkualitas</li>
             <li><i class="bi bi-check-circle-fill text-success me-2"></i>Fasilitas Modern</li>
-            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Pengajar Berpengalaman</li>
+            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Pembelanjaan Lengkap</li>
             <li><i class="bi bi-check-circle-fill text-success me-2"></i>Program Keahlian Beragam</li>
           </ul>
         </div>
         <div class="col-lg-6 d-flex justify-content-end" data-aos="fade-up" data-aos-delay="200">
           <img
             src="{{ asset('storage/assets/ypc.jpeg') }}"
-            alt="About SMK YPC"
             width="500"
             height="200"
             class="img-fluid rounded"
@@ -51,7 +51,6 @@
     </div>
   </section>
 
-  <!-- Produk Section -->
   <section id="news" class="bg-light py-5">
     <div class="container">
       <h2 class="text-center mb-5" data-aos="fade-up">Produk</h2>
@@ -96,7 +95,6 @@
     </div>
   </section>
 
-  <!-- Gallery Section -->
   <section id="gallery" class="py-5">
     <div class="container">
       <h2 class="text-center mb-5" data-aos="fade-up">Galeri</h2>
@@ -123,7 +121,6 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
   <section id="contact" class="bg-primary text-white py-5">
     <div class="container">
       <h2 class="text-center mb-5" data-aos="fade-up">Hubungi Kami</h2>
@@ -156,7 +153,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="bg-dark text-white py-4">
     <div class="container">
       <div class="row align-items-center">

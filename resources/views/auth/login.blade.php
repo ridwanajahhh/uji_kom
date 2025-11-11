@@ -6,7 +6,7 @@
     <div class="col-md-6">
       <div class="card shadow">
         <div class="card-header bg-primary text-white text-center">
-          <h4>Login ke Marketplace SMK YPC Tasikmalaya</h4>
+          <h4>Login ke Marketplace</h4>
         </div>
         <div class="card-body">
           <form method="POST" action="{{ route('login') }}">
@@ -14,11 +14,8 @@
 
             <!-- Email Address -->
             <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-              @error('email')
-                <div class="invalid-feedback">{{ $message }}</div>
-              @enderror
+              <label for="username" class="form-label">username</label>
+              <input id="username" type="text" class="form-control" name="username" required autofocus>
             </div>
 
             <!-- Password -->
