@@ -52,7 +52,6 @@
       font-weight: 600;
     }
 
-    /* Efek sticky dengan transparansi */
     .navbar.sticky-top {
       backdrop-filter: blur(8px);
       background: rgba(0, 86, 214, 0.85);
@@ -62,36 +61,41 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
+      <!-- Logo dan Nama -->
       <a class="navbar-brand d-flex align-items-center" href="#">
         <img src="{{ asset('storage/assets/iconss.png') }}" alt="SMK YPC Tasikmalaya" width="30" height="30" class="me-2">
         Marketplace SMK YPC Tasikmalaya
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+      <!-- Tombol Toggle untuk Mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
+      <!-- Menu Navbar -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto text-center">
           <li class="nav-item">
-            <a class="nav-link active" href="/#home">Beranda</a>
+            <a class="nav-link" href="#kategori">Kategori</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/#about">Tentang Kami</a>
+            <a class="nav-link" href="#produk">Produk</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/#news">Produk</a>
+            <a class="nav-link" href="#toko">Toko</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/#gallery">Galeri</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/#contact">Kontak</a>
-          </li>
+          
           @auth
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
+            </li>
             <li class="nav-item">
               <form method="POST" action="{{ route('logout') }}" class="d-inline">
                 @csrf
-                <button type="submit" class="btn btn-link nav-link text-white">Logout</button>
+                <button type="submit" class="btn btn-link nav-link text-white" style="text-decoration:none;">
+                  Logout
+                </button>
               </form>
             </li>
           @else

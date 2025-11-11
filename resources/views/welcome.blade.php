@@ -11,7 +11,6 @@
             Sekolah Menengah Kejuruan yang berkomitmen untuk mencetak generasi muda
             yang berkualitas, inovatif, dan siap menghadapi tantangan dunia kerja.
           </p>
-          <a href="{{ route('login') }}" class="btn btn-light btn-lg">Login</a>
         </div>
       </div>
     </div>

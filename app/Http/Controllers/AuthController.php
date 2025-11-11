@@ -10,6 +10,9 @@ class AuthController extends Controller
 {
     public function showLoginForm()
     {
+        if (Auth::check()) {
+            return redirect('/dashboard');
+        }
         return view('auth.login');
     }
 
@@ -23,7 +26,7 @@ class AuthController extends Controller
         if (Auth::attempt($request->only('username', 'password'), $request->boolean('remember'))) {
             $request->session()->regenerate();
 
-            return redirect()->intended('/');
+            return redirect()->intended('/dashboard');
         }
 
         throw ValidationException::withMessages([
