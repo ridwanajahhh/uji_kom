@@ -39,5 +39,101 @@ class DatabaseSeeder extends Seeder
                 'updated_at' => now(),
             ],
         ]);
+
+        DB::table('kategori')->insert([
+            [
+                'nama_kategori' => 'Makanan & Minuman',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'nama_kategori' => 'Alat Tulis',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'nama_kategori' => 'Kerajinan',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        ]);
+
+        DB::table('toko')->insert([
+            [
+                'nama_toko' => 'Toko Ridwan',
+                'deskripsi' => 'Toko yang menyediakan berbagai produk makanan dan minuman berkualitas',
+                'kontak_toko' => '081298765432',
+                'alamat' => 'Jl. Raya Tasikmalaya No. 123',
+                'id_user' => 2,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        ]);
+
+        DB::table('produk')->insert([
+            [
+                'nama_produk' => 'Chiki Twist',
+                'harga' => 5000,
+                'stok' => 100,
+                'id_kategori' => 1,
+                'id_toko' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'nama_produk' => 'Jetz Sweet Stick',
+                'harga' => 3000,
+                'stok' => 150,
+                'id_kategori' => 1,
+                'id_toko' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'nama_produk' => 'Teh Pucuk Harum',
+                'harga' => 4000,
+                'stok' => 200,
+                'id_kategori' => 1,
+                'id_toko' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'nama_produk' => 'Pulpen Gel',
+                'harga' => 2500,
+                'stok' => 80,
+                'id_kategori' => 2,
+                'id_toko' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        ]);
+
+        DB::table('gambar_produk')->insert([
+            [
+                'id_produk' => 1,
+                'nama_gambar' => 'chiki.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'id_produk' => 2,
+                'nama_gambar' => 'jetz.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'id_produk' => 3,
+                'nama_gambar' => 'pucuk.png',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'id_produk' => 4,
+                'nama_gambar' => 'pulpen.webp',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        ]);
     }
 }

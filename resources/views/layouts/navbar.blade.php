@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SMK YPC Tasikmalaya</title>
+  <title>MarketPlace</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
@@ -63,8 +63,8 @@
     <div class="container">
       <!-- Logo dan Nama -->
       <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="{{ asset('storage/assets/iconss.png') }}" alt="SMK YPC Tasikmalaya" width="30" height="30" class="me-2">
-        Marketplace SMK YPC Tasikmalaya
+        <img src="{{ asset('storage/assets/p.png') }}" alt="ACS" width="30" height="30" class="me-2">
+        ACS Marketplace
       </a>
 
       <!-- Tombol Toggle untuk Mobile -->
@@ -77,13 +77,13 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto text-center">
           <li class="nav-item">
-            <a class="nav-link" href="#kategori">Kategori</a>
+            <a class="nav-link" href="admin\kategori">Kategori</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#produk">Produk</a>
+            <a class="nav-link" href="admin\produk">Produk</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#toko">Toko</a>
+            <a class="nav-link" href="admin\toko">Toko</a>
           </li>
           
           @auth

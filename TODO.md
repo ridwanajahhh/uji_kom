@@ -1,20 +1,13 @@
-# TODO: Create School Website Display
+# TODO: Implement WhatsApp Purchase for Featured Products
 
-- [x] Create navbar.blade.php with comprehensive navigation bar for school website
-- [x] Create welcome.blade.php with hero section, about section, news/events, gallery, contact, and footer
-- [x] Edit layouts.blade.php to include footer yield if needed
-- [x] Run Laravel server to test the website display
-- [x] Verify styling and functionality (Browser tool disabled, but server is running at http://127.0.0.1:8000)
-- [x] Create login view and authentication system
-- [x] Create dashboard view for logged-in users with marketplace statistics
-- [x] Update navbar to show login/dashboard links based on authentication status
-- [x] Create models for Toko, Produk, Kategori, GambarProduk
-- [x] Create DashboardController to handle dashboard logic
-- [x] Update routes to include dashboard route with auth middleware
-- [x] Update AuthController to redirect to dashboard after login
-- [x] Create login.blade.php view with form for email and password
-- [x] Create AuthController to handle login logic
-- [x] Add routes for GET /login (show form) and POST /login (process login) and POST /logout
-- [x] Update "Login" button in welcome.blade.php to link to /login route
-- [x] Update navbar to show login/logout links based on authentication status
-- [x] Run migrations and start Laravel server
+## Tasks
+- [x] Modify the "Beli Sekarang" button in `resources/views/welcome.blade.php` to link to WhatsApp with pre-filled purchase message
+- [x] Use the store's contact number (`kontak_toko`) for WhatsApp link
+- [x] Include product name and store name in the WhatsApp message
+- [x] Test the functionality by running the application
+
+## Notes
+- Assumes `kontak_toko` in Toko model is a valid phone number
+- WhatsApp link format: https://wa.me/{phone}?text={encoded_message}
+- Message template: "Halo, saya ingin membeli produk {nama_produk} dari toko {nama_toko}"
+- Application is running on http://127.0.0.1:8000

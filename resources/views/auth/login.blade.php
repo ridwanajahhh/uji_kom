@@ -14,7 +14,7 @@
 
             <!-- Email Address -->
             <div class="mb-3">
-              <label for="username" class="form-label">username</label>
+              <label for="username" class="form-label">Username</label>
               <input id="username" type="text" class="form-control" name="username" required autofocus>
             </div>
 
