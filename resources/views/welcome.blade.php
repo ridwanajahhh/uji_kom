@@ -16,6 +16,8 @@
     </div>
   </section>
 
+
+
   <section id="about" class="py-5">
     <div class="container">
       <div class="row align-items-center">
@@ -110,7 +112,10 @@
     <div class="container">
       <h2 class="text-center mb-5 fw-bold text-warning" data-aos="fade-up">Produk Unggulan</h2>
       <div class="row g-4">
-        @foreach ($produk as $index => $p)
+        @php
+          $allProduk = \App\Models\Produk::with(['toko', 'kategori', 'gambarProduk'])->get();
+        @endphp
+        @foreach ($allProduk as $index => $p)
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="{{ ($index+1)*100 }}">
             <div class="card h-100 shadow-sm border-0 hover-card product-card">
               @if($p->gambarProduk->isNotEmpty())
@@ -153,7 +158,68 @@
     </div>
   </section>
 
-  <section id="gallery" class="py-5">
+  @if($search)
+  <section id="search-results" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5 fw-bold text-info" data-aos="fade-up">
+        Hasil Pencarian untuk "{{ $search }}"
+      </h2>
+      @if($produk->isNotEmpty())
+      <div class="row g-4">
+        @foreach ($produk as $index => $p)
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="{{ ($index+1)*100 }}">
+            <div class="card h-100 shadow-sm border-0 hover-card product-card">
+              @if($p->gambarProduk->isNotEmpty())
+                <img src="{{ asset('storage/assets/' . $p->gambarProduk->first()->nama_gambar) }}"
+                     class="card-img-top" alt="{{ $p->nama_produk }}" style="height: 200px; object-fit: cover;">
+              @else
+                <div class="card-img-top bg-secondary d-flex align-items-center justify-content-center" style="height: 200px;">
+                  <i class="bi bi-image text-white display-4"></i>
+                </div>
+              @endif
+              <div class="card-body">
+                <h6 class="card-title fw-bold">{{ $p->nama_produk }}</h6>
+                <p class="text-muted small mb-2">{{ $p->kategori->nama_kategori }}</p>
+                <p class="text-muted small mb-2"><i class="bi bi-shop me-1"></i>{{ $p->toko->nama_toko }}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-bold text-primary">Rp {{ number_format($p->harga, 0, ',', '.') }}</span>
+                  <small class="text-muted">Stok: {{ $p->stok }}</small>
+                </div>
+              </div>
+              <div class="card-footer bg-transparent border-0 p-3">
+                @if($p->toko->kontak_toko)
+                @php
+                  $message = "Halo, saya ingin membeli produk {$p->nama_produk} dari toko {$p->toko->nama_toko} dengan harga Rp " . number_format($p->harga, 0, ',', '.') . ". Apakah masih tersedia?";
+                  $encodedMessage = urlencode($message);
+                  $whatsappUrl = "https://wa.me/{$p->toko->kontak_toko}?text={$encodedMessage}";
+                @endphp
+                <a href="{{ $whatsappUrl }}" target="_blank" class="btn btn-warning w-100">
+                  <i class="bi bi-whatsapp me-2"></i>Beli Sekarang
+                </a>
+                @else
+                <button class="btn btn-secondary w-100" disabled>
+                  <i class="bi bi-whatsapp me-2"></i>WhatsApp Tidak Tersedia
+                </button>
+                @endif
+              </div>
+            </div>
+          </div>
+        @endforeach
+      </div>
+      @else
+      <div class="text-center">
+        <div class="alert alert-info" role="alert">
+          <i class="bi bi-search me-2"></i>
+          Tidak ada produk yang ditemukan untuk "{{ $search }}"
+        </div>
+        <a href="{{ url('/') }}" class="btn btn-primary">Lihat Semua Produk</a>
+      </div>
+      @endif
+    </div>
+  </section>
+  @endif
+
+  <section id="galeri" class="py-5">
     <div class="container">
       <h2 class="text-center mb-5" data-aos="fade-up">Galeri</h2>
       <div class="row">

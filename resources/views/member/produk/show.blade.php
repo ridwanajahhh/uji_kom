@@ -3,7 +3,7 @@
 @section('content')
 <div class="container-fluid py-4">
     <div class="row">
-        <!-- Sidebar -->
+      
         <nav id="sidebar" class="col-md-2 d-md-block sidebar p-3 rounded-end-4 shadow-sm">
             <h5 class="text-center mb-4 fw-bold text-primary">
                 <i class="bi bi-shop-window me-2"></i>Member Panel
@@ -35,7 +35,7 @@
             </ul>
         </nav>
 
-        <!-- Main Content -->
+ 
         <main class="col-md-10 ms-sm-auto col-lg-10 px-md-4">
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h1 class="h2">Detail Produk</h1>
@@ -50,7 +50,7 @@
             </div>
 
             <div class="row">
-                <!-- Product Images -->
+              
                 <div class="col-lg-6">
                     <div class="card shadow-sm border-0 mb-4">
                         <div class="card-header bg-success text-white">
@@ -92,7 +92,7 @@
                     </div>
                 </div>
 
-                <!-- Product Information -->
+              
                 <div class="col-lg-6">
                     <div class="card shadow-sm border-0 mb-4">
                         <div class="card-header bg-primary text-white">
@@ -150,7 +150,7 @@
                         </div>
                     </div>
 
-                    <!-- Store Information -->
+                 
                     <div class="card shadow-sm border-0">
                         <div class="card-header bg-info text-white">
                             <h5 class="mb-0"><i class="bi bi-shop me-2"></i>Informasi Toko</h5>

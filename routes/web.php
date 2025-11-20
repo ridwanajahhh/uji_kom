@@ -11,9 +11,12 @@ use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/produk', [HomeController::class, 'produk'])->name('produk');
 
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
+Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
+Route::post('/register', [AuthController::class, 'register']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 use App\Http\Controllers\MemberTokoController;

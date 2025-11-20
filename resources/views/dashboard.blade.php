@@ -3,7 +3,6 @@
 @section('content')
 <div class="container-fluid py-4">
     <div class="row">
-        <!-- Sidebar -->
         <nav id="sidebar" class="col-md-2 d-md-block sidebar p-3 rounded-end-4 shadow-sm">
             <h5 class="text-center mb-4 fw-bold text-primary">
                 <i class="bi bi-shop-window me-2"></i>{{ $user->role === 'admin' ? 'Admin Panel' : 'Member Panel' }}
@@ -58,7 +57,6 @@
             </ul>
         </nav>
 
-        <!-- Main Content -->
         <main class="col-md-10 ms-sm-auto col-lg-10 px-md-4">
             <div class="pt-3 pb-2 mb-4 border-bottom">
                 <h2 class="fw-bold text-dark">Dashboard</h2>
@@ -82,7 +80,6 @@
             </div>
             @endif
 
-            <!-- Statistics Cards -->
             <div class="row g-4 mb-5">
                 <div class="col-md-4">
                     <div class="card border-0 shadow-sm stat-card">
@@ -119,7 +116,6 @@
                 </div>
             </div>
 
-            <!-- Quick Actions -->
             <div class="row g-4 mb-5">
                 <div class="col-12">
                     <div class="card border-0 shadow-sm">
@@ -173,7 +169,6 @@
                 </div>
             </div>
 
-            <!-- Recent Products -->
             @if($produk->isNotEmpty())
             <div class="card shadow-sm border-0 mb-5">
                 <div class="card-header bg-success text-white fw-bold d-flex justify-content-between align-items-center">
@@ -216,7 +211,6 @@
             </div>
             @endif
 
-            <!-- Recent Categories -->
             @if($kategori->isNotEmpty() && $user->role === 'admin')
             <div class="card shadow-sm border-0 mb-5">
                 <div class="card-header bg-warning text-white fw-bold d-flex justify-content-between align-items-center">
@@ -245,7 +239,6 @@
             </div>
             @endif
 
-            <!-- Recent Stores -->
             @if($toko->isNotEmpty())
             <div class="card shadow-sm border-0 mb-5">
                 <div class="card-header bg-primary text-white fw-bold d-flex justify-content-between align-items-center">

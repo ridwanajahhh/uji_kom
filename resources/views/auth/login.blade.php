@@ -33,6 +33,10 @@
               </button>
             </div>
           </form>
+
+          <div class="text-center mt-3">
+            <p>Belum punya akun? <a href="{{ route('register') }}">Register di sini</a></p>
+          </div>
         </div>
       </div>
     </div>

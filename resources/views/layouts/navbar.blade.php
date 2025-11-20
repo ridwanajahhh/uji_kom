@@ -61,7 +61,6 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
-      <!-- Logo dan Nama -->
       <a class="navbar-brand d-flex align-items-center" href="#">
         <img src="{{ asset('storage/assets/p.png') }}" alt="ACS" width="30" height="30" class="me-2">
         ACS Marketplace
@@ -73,19 +72,25 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Menu Navbar -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto text-center">
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">Kategori</a>
+          </li> -->
           <li class="nav-item">
-            <a class="nav-link" href="admin\kategori">Kategori</a>
+            <a class="nav-link" href ="{{ route('produk') }}">Produk</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="admin\produk">Produk</a>
+            <a class="nav-link" href="/">Beranda</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="admin\toko">Toko</a>
+
+          <li class="nav-item d-flex align-items-center">
+            <form class="d-flex" action="/" method="GET">
+              <input class="form-control me-2" type="search" name="search" placeholder="Cari produk..." aria-label="Search" value="{{ request('search') }}">
+              <button class="btn btn-outline-light" type="submit">Cari</button>
+            </form>
           </li>
-          
+
           @auth
             <li class="nav-item">
               <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>

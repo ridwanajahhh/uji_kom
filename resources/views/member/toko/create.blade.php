@@ -3,7 +3,7 @@
 @section('content')
 <div class="container-fluid py-4">
     <div class="row">
-        <!-- Sidebar -->
+       
         <nav id="sidebar" class="col-md-2 d-md-block sidebar p-3 rounded-end-4 shadow-sm">
             <h5 class="text-center mb-4 fw-bold text-primary">
                 <i class="bi bi-shop-window me-2"></i>Member Panel
@@ -35,7 +35,7 @@
             </ul>
         </nav>
 
-        <!-- Main Content -->
+        
         <main class="col-md-10 ms-sm-auto col-lg-10 px-md-4">
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h1 class="h2">Tambah Toko Baru</h1>
